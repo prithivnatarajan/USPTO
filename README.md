@@ -61,18 +61,17 @@ Everything required for the project is contained in the ./Assets folder
 ##### *FILL*
 
 **nuget_packages**
-
 Do not edit. Handled by the plugins.
 
 **Plugins**
-
-Do not edit. Plugins to use VR.
+Do not edit. Plugins imported to handle VR.
 * SteamVR: Interface between the headset and the computer
 * TextMeshPro: Handles text shown in 3D.
 * VRTK: Virtual reality toolkit contains the basic components required
   VR such as, the model of the controller, handling input etc.
 
 **Prefabs**
+All the objects used in this Unity project.
 * ControllerScripts: Handles input.
 * Dragger: Handles the dragging of the patent to show more information
 * Environment: The lights and the floor.
@@ -87,19 +86,15 @@ Do not edit. Plugins to use VR.
 ##### *EDIT*
 
 **Scenes**
-
 Contains only the main scene.
 
 **Scripts**
-
 Description is present in the script itself.
 
 **Shaders**
-
-3DTextCullBack: Used to show text visible only from one direction.
+* 3DTextCullBack: Used to show text visible only from one direction.
 
 **Textures**
-
 The images used in the project. Their description is apparent from
 their name.
 
