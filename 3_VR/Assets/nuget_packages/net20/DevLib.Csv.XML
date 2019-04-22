@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevLib.Csv</name>
+    </assembly>
+    <members>
+        <member name="T:DevLib.Csv.CsvDocument">
+            <summary>
+                Represents a CSV document.
+            </summary>
+        </member>
+        <member name="F:DevLib.Csv.CsvDocument._disposed">
+            <summary>
+                Field _disposed.
+            </summary>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.#ctor">
+            <summary>
+                Initializes a new instance of the
+                <see cref="T:DevLib.Csv.CsvDocument"/>
+                class.
+            </summary>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Open(System.IO.Stream,System.Char,System.Char)">
+            <summary>
+                Opens the csv document from the specified stream.
+            </summary>
+            <param name="inStream">The stream containing the csv document to load.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+            <returns>Rows of csv document.</returns>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Open(System.String,System.Char,System.Char)">
+            <summary>
+                Opens the csv document from the specified file.
+            </summary>
+            <param name="filename">The file containing the csv document to load.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+            <returns>Rows of csv document.</returns>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Open(System.IO.TextReader,System.Char,System.Char)">
+            <summary>
+                Opens the csv document from the specified System.IO.TextReader.
+            </summary>
+            <param name="reader">The TextReader used to feed the csv data into the document.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+            <returns>Rows of csv document.</returns>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Load(System.IO.Stream,System.Boolean,System.Char,System.Char)">
+            <summary>
+                Loads the csv document from the specified stream.
+            </summary>
+            <param name="inStream">The stream containing the csv document to load.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Load(System.String,System.Boolean,System.Char,System.Char)">
+            <summary>
+                Loads the csv document from the specified file.
+            </summary>
+            <param name="filename">The file containing the csv document to load.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Load(System.IO.TextReader,System.Boolean,System.Char,System.Char)">
+            <summary>
+                Loads the csv document from the specified System.IO.TextReader.
+            </summary>
+            <param name="reader">The TextReader used to feed the csv data into the document.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.LoadCsv(System.String,System.Boolean,System.Char,System.Char)">
+            <summary>
+                Loads the csv document from the specified string.
+            </summary>
+            <param name="csvString">String containing the csv document to load.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Save(System.IO.Stream,System.Boolean,System.Boolean,System.Char,System.Char)">
+            <summary>
+                Saves the csv document to the specified stream.
+            </summary>
+            <param name="outStream">The stream to which you want to save.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="quoteAll">true to quote all cells; otherwise only quote the cell contains delimiter.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Save(System.IO.Stream,System.Boolean,System.Boolean,System.Char,System.Char,System.String)">
+            <summary>
+                Saves the csv document to the specified stream.
+            </summary>
+            <param name="outStream">The stream to which you want to save.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="quoteAll">true to quote all cells; otherwise only quote the cell contains delimiter.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+            <param name="newLine">New line characters to use.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Save(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Char,System.Char)">
+            <summary>
+                Saves the csv document to the specified file.
+            </summary>
+            <param name="filename">The location of the file where you want to save the document.</param>
+            <param name="overwrite">Whether overwrite exists file</param>
+            <param name="append">Determines whether data is to be appended to the file. If the file exists and append is
+                false, the file is overwritten. If the file exists and append is true, the data is appended to the file.
+                Otherwise, a new file is created.
+            </param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="quoteAll">true to quote all cells; otherwise only quote the cell contains delimiter.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Save(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Char,System.Char,System.String)">
+            <summary>
+                Saves the csv document to the specified file.
+            </summary>
+            <param name="filename">The location of the file where you want to save the document.</param>
+            <param name="overwrite">Whether overwrite exists file</param>
+            <param name="append">Determines whether data is to be appended to the file. If the file exists and append is
+                false, the file is overwritten. If the file exists and append is true, the data is appended to the file.
+                Otherwise, a new file is created.
+            </param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="quoteAll">true to quote all cells; otherwise only quote the cell contains delimiter.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+            <param name="newLine">New line characters to use.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Save(System.IO.TextWriter,System.Boolean,System.Boolean,System.Char,System.Char)">
+            <summary>
+                Saves the csv document to the specified System.IO.TextWriter.
+            </summary>
+            <param name="writer">The TextWriter to which you want to save.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="quoteAll">true to quote all cells; otherwise only quote the cell contains delimiter.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Save(System.IO.TextWriter,System.Boolean,System.Boolean,System.Char,System.Char,System.String)">
+            <summary>
+                Saves the csv document to the specified System.IO.TextWriter.
+            </summary>
+            <param name="writer">The TextWriter to which you want to save.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="quoteAll">true to quote all cells; otherwise only quote the cell contains delimiter.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+            <param name="newLine">New line characters to use.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.GetDataTable(System.Int32)">
+            <summary>
+                Gets the DataTable.
+            </summary>
+            <param name="startIndex">The zero-based start index.</param>
+            <returns>DataTable instance.</returns>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.GetDataTable(System.Int32,System.Int32)">
+            <summary>
+                Gets the DataTable.
+            </summary>
+            <param name="startIndex">The zero-based start index.</param>
+            <param name="count">The count of row to get.</param>
+            <returns>DataTable instance.</returns>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Close">
+            <summary>
+                Releases all resources used by the current instance of the
+                <see cref="T:DevLib.Csv.CsvDocument"/>
+                class.
+            </summary>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Dispose">
+            <summary>
+                Releases all resources used by the current instance of the
+                <see cref="T:DevLib.Csv.CsvDocument"/>
+                class.
+            </summary>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.Dispose(System.Boolean)">
+            <summary>
+                Releases all resources used by the current instance of the
+                <see cref="T:DevLib.Csv.CsvDocument"/>
+                class.
+                protected virtual for non-sealed class; private for sealed class.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.SplitNested(System.String,System.Char,System.Char)">
+            <summary>
+                Splits string by a specified delimiter and keep nested string with a specified qualifier.
+            </summary>
+            <param name="source">Source string.</param>
+            <param name="delimiter">Delimiter character.</param>
+            <param name="qualifier">Qualifier character.</param>
+            <returns>A list whose elements contain the substrings in this instance that are delimited by the
+                delimiter.
+            </returns>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.CheckDisposed">
+            <summary>
+                Method CheckDisposed.
+            </summary>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.InternalLoad(System.IO.TextReader,System.Boolean,System.Char,System.Char)">
+            <summary>
+                Loads the csv document from the specified System.IO.TextReader.
+            </summary>
+            <param name="reader">The TextReader used to feed the csv data into the document.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+        </member>
+        <member name="M:DevLib.Csv.CsvDocument.InternalSave(System.IO.TextWriter,System.Boolean,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+                Saves the csv document to the specified System.IO.TextWriter.
+            </summary>
+            <param name="writer">The TextWriter to which you want to save.</param>
+            <param name="hasHeader">true if the csv has a header row; otherwise false.</param>
+            <param name="quoteAll">true to quote all cells; otherwise only quote the cell contains delimiter.</param>
+            <param name="delimiter">Delimiter character to use.</param>
+            <param name="qualifier">Character to use when quoting.</param>
+            <param name="newLine">New line characters to use.</param>
+        </member>
+        <member name="P:DevLib.Csv.CsvDocument.Table">
+            <summary>
+                Gets instance represents csv data.
+            </summary>
+        </member>
+        <member name="P:DevLib.Csv.CsvDocument.RowCount">
+            <summary>
+                Gets the total number of rows.
+            </summary>
+        </member>
+        <member name="P:DevLib.Csv.CsvDocument.HeaderColumnCount">
+            <summary>
+                Gets the total number of columns.
+            </summary>
+        </member>
+        <member name="P:DevLib.Csv.CsvDocument.HeaderColumns">
+            <summary>
+                Gets header column names.
+            </summary>
+        </member>
+        <member name="P:DevLib.Csv.CsvDocument.HasHeader">
+            <summary>
+                Gets a value indicating whether the loaded csv data has headers.
+            </summary>
+        </member>
+        <member name="P:DevLib.Csv.CsvDocument.Item(System.Int32)">
+            <summary>
+                Gets the row at the specified index.
+            </summary>
+            <param name="rowIndex">The zero-based index of the row to return.</param>
+            <returns>The specified row.</returns>
+        </member>
+        <member name="P:DevLib.Csv.CsvDocument.Item(System.Int32,System.Int32)">
+            <summary>
+                Gets or sets the value at the specified row index and the specified column index.
+            </summary>
+            <param name="rowIndex">The zero-based index of the row to return.</param>
+            <param name="columnIndex">The zero-based index of the column to return.</param>
+            <returns>The value at the specified row index and the specified column index.</returns>
+        </member>
+        <member name="P:DevLib.Csv.CsvDocument.Item(System.Int32,System.String)">
+            <summary>
+                Gets or sets the value at the specified row index and the specified column name.
+            </summary>
+            <param name="rowIndex">The zero-based index of the row to return.</param>
+            <param name="columnName">The System.Data.DataColumn.ColumnName of the column to return.</param>
+            <returns>The value at the specified row index and the specified column name.</returns>
+        </member>
+        <member name="T:DevLib.Csv.InternalLogger">
+            <summary>
+                Internal logger.
+            </summary>
+        </member>
+        <member name="F:DevLib.Csv.InternalLogger.ExecutingAssembly">
+            <summary>
+                Field ExecutingAssembly.
+            </summary>
+        </member>
+        <member name="F:DevLib.Csv.InternalLogger.GlobalDebugFlagFile">
+            <summary>
+                Field GlobalDebugFlagFile.
+            </summary>
+        </member>
+        <member name="F:DevLib.Csv.InternalLogger.DebugFlagFile">
+            <summary>
+                Field DebugFlagFile.
+            </summary>
+        </member>
+        <member name="F:DevLib.Csv.InternalLogger.LogFile">
+            <summary>
+                Field LogFile.
+            </summary>
+        </member>
+        <member name="F:DevLib.Csv.InternalLogger.LogFileBackup">
+            <summary>
+                Field LogFileBackup.
+            </summary>
+        </member>
+        <member name="F:DevLib.Csv.InternalLogger.SyncRoot">
+            <summary>
+                Field SyncRoot.
+            </summary>
+        </member>
+        <member name="M:DevLib.Csv.InternalLogger.Log(System.Object[])">
+            <summary>
+                Method Log.
+            </summary>
+            <param name="objs">Diagnostic messages or objects to log.</param>
+        </member>
+        <member name="M:DevLib.Csv.InternalLogger.GetStackFrameInfo(System.Int32)">
+            <summary>
+                Builds a readable representation of the stack trace.
+            </summary>
+            <param name="skipFrames">The number of frames up the stack to skip.</param>
+            <returns>A readable representation of the stack trace.</returns>
+        </member>
+        <member name="M:DevLib.Csv.InternalLogger.RenderLog(System.Object[])">
+            <summary>
+                Render parameters into a string.
+            </summary>
+            <param name="objs">Diagnostic messages or objects to log.</param>
+            <returns>The rendered layout string.</returns>
+        </member>
+        <member name="M:DevLib.Csv.InternalLogger.AppendToFile(System.String)">
+            <summary>
+                Append log message to the file.
+            </summary>
+            <param name="message">Log message to append.</param>
+        </member>
+    </members>
+</doc>
