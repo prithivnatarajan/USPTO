@@ -1,3 +1,11 @@
+'''
+
+This script uses ScapeData.py and combines all the 
+data downloaded using DownloadData.py into one file
+patent_info.tsv. This file will be used to carry out
+the data analysis.
+
+'''
 
 # Python libraries
 import csv
