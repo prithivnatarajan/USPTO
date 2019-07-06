@@ -1,4 +1,4 @@
-# uspto
+# USPTO
 Capstone project with USPTO 
 
 The established United States Patent and Trademark Office (USPTO) routing process from a patent’s issuance to its approval is cumbersome and time-consuming. One aspect that makes the process arduous is the involvement of many supervisors between its initial and final stage. 
