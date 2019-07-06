@@ -53,15 +53,6 @@ The files were downloaded from PatFT:
 
 Everything required for the project is contained in the ./Assets folder
 
-**Data**
-##### *FILL*
-
-**Editor**
-##### *FILL*
-
-**Materials**
-##### *FILL*
-
 **nuget_packages**
 Do not edit. Handled by the plugins.
 
