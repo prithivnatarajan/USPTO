@@ -1,5 +1,5 @@
 
-# USPTO
+# United States Patent and Trademark Office (USPTO)
 Capstone project with USPTO 
 
 
